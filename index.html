@@ -343,20 +343,14 @@
 
       
         
-          
-            <h3 id="安装Python3"><a href="#安装Python3" class="headerlink" title="安装Python3"></a>安装Python3</h3><h4 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h4><p>yum install gcc-c++ -y<br>yum install zlib-devel -y #PIP所需依赖<br>yum install openssl-devel #PIP所需依赖</p>
-<h4 id="安装Python3-1"><a href="#安装Python3-1" class="headerlink" title="安装Python3"></a>安装Python3</h4><p>wget -c <a href="https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz" target="_blank" rel="external">https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz</a><br>tar zxvf Python-3.6.3.tgz<br>cd Python-3.6.3<br>./configure –prefix=/usr/local/python3<br>make &amp;&amp; make install<br>cd /usr/bin/<br>ln -s /usr/local/python3/bin/python3.4 python3</p>
-<h3 id="安装PIP"><a href="#安装PIP" class="headerlink" title="安装PIP"></a>安装PIP</h3><h4 id="安装setuptools"><a href="#安装setuptools" class="headerlink" title="安装setuptools"></a>安装setuptools</h4><p>wget –no-check-certificate  <a href="https://pypi.python.org/packages/source/s/setuptools/setuptools-19.6.tar.gz#md5=c607dd118eae682c44ed146367a17e26" target="_blank" rel="external">https://pypi.python.org/packages/source/s/setuptools/setuptools-19.6.tar.gz#md5=c607dd118eae682c44ed146367a17e26</a><br>tar -zxvf setuptools-19.6.tar.gz<br>cd setuptools-19.6<br>python3 setup.py build<br>python3 setup.py install</p>
-<h4 id="安装PIP-1"><a href="#安装PIP-1" class="headerlink" title="安装PIP"></a>安装PIP</h4><p>wget –no-check-certificate  <a href="https://pypi.python.org/packages/source/p/pip/pip-8.0.2.tar.gz#md5=3a73c4188f8dbad6a1e6f6d44d117eeb" target="_blank" rel="external">https://pypi.python.org/packages/source/p/pip/pip-8.0.2.tar.gz#md5=3a73c4188f8dbad6a1e6f6d44d117eeb</a><br>tar -zxvf pip-8.0.2.tar.gz<br>cd pip-8.0.2<br>python3 setup.py build<br>python3 setup.py install</p>
-<h3 id="安装Virtualenv-Django-部署项目"><a href="#安装Virtualenv-Django-部署项目" class="headerlink" title="安装Virtualenv+Django+部署项目"></a>安装Virtualenv+Django+部署项目</h3><p>python3 -m pip install virtualenv<br>/usr/local/python3/bin/virtualenv env<br>source bin/activate<br>pip3 install django==1.11<br>python -m django –version<br>pip install -r requirements.txt</p>
-<h4 id="安装boto3"><a href="#安装boto3" class="headerlink" title="安装boto3"></a>安装boto3</h4><p>pip3 install boto3</p>
-<p>Next, set up credentials (in e.g. ~/.aws/credentials):</p>
-<p>[default]<br>aws_access_key_id = YOUR_KEY<br>aws_secret_access_key = YOUR_SECRET<br>Then, set up a default region (in e.g. ~/.aws/config):</p>
-<p>[default]<br>region=us-east-1</p>
-<h4 id="安装screen"><a href="#安装screen" class="headerlink" title="安装screen"></a>安装screen</h4><p>yum install screen -y<br>screen -S xxx<br>screen -r xxx</p>
-<p>python manage.py runserver </p>
-
-          
+          <p>Python3+PIP+Virtualenv+Django+Boto3+部署项目</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/05/AWS-Python-Django服务环境配置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
