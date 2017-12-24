@@ -262,6 +262,281 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/24/解决LNMP下WordPress提示scandir-错误的方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="柚子(Vivi)">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://owk2fceoh.bkt.clouddn.com/17-9-20/78274035.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="灰色英雄">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/24/解决LNMP下WordPress提示scandir-错误的方法/" itemprop="url">解决LNMP下WordPress提示scandir()错误的方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-24T14:13:13+08:00">
+                2017-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/24/解决LNMP下WordPress提示scandir-错误的方法/" class="leancloud_visitors" data-flag-title="解决LNMP下WordPress提示scandir()错误的方法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Warning: scandir() has been disabled for security reasons in xxx/yangjunwei/wp-includes/class-wp-theme.php on line 980……<br>查了一下，这是由于lnmp环境下的php.ini将函数scandir()禁用了，可以使用 winSCP 软件编辑 /usr/local/php/etc/php.ini，找到并删除 disable_functions 后面的 scandir 函数即可。</p>
+<p>可以使用如下命令实现删除：</p>
+<p>sed -i ‘s/,scandir//g’ /usr/local/php/etc/php.ini<br>sed 还能实现查找功能，更多功能前往：Linux中sed命令使用</p>
+<p>记得要使修改生效，还需要 SSH 命令重启php-fpm：</p>
+<p>/etc/init.d/php-fpm restart</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/24/lnmp环境-开启pathinfo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="柚子(Vivi)">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://owk2fceoh.bkt.clouddn.com/17-9-20/78274035.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="灰色英雄">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/24/lnmp环境-开启pathinfo/" itemprop="url">lnmp环境 开启pathinfo</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-24T14:04:33+08:00">
+                2017-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/24/lnmp环境-开启pathinfo/" class="leancloud_visitors" data-flag-title="lnmp环境 开启pathinfo">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="thinkphp-url访问模式中-默认的pathinfo不起作用？"><a href="#thinkphp-url访问模式中-默认的pathinfo不起作用？" class="headerlink" title="thinkphp url访问模式中 默认的pathinfo不起作用？"></a>thinkphp url访问模式中 默认的pathinfo不起作用？</h3><p>1、检查你的tp配置文件config.php URL模式<br>‘url_model’=&gt; ‘1’, //URL模式 即pathinfo</p>
+<p>2、服务器 /usr/local/php/etc/php.ini 文件<br>cgi.fix_pathinfo=0 </p>
+<p>改成<br>cgi.fix_pathinfo=1</p>
+<p>3、服务器 /usr/local/nginx/conf/enable-php.conf 文件 改成这样，然后重启lnmp 命令 lnmp restart<br>        location ~ [^/].php(/|$)<br>        {</p>
+<pre><code>    #try_files $uri =404;
+    fastcgi_pass  unix:/tmp/php-cgi.sock;
+    fastcgi_index index.php;
+    include fastcgi.conf;
+    include pathinfo.conf;
+}
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/05/AWS-Python-Django服务环境配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -907,7 +1182,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
